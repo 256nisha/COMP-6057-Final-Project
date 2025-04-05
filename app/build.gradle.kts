@@ -32,7 +32,7 @@ android {
 }
 
 dependencies {
-
+    implementation(libs.gson) //Added the gson library
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)
