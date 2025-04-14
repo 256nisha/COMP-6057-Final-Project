@@ -3,11 +3,4 @@
     <string name="email">Email</string>
     <string name="password">Password</string>
     <string name="login">Login</string>
-    <string name="sport_label">Sport: %s</string>
-    <string name="round_label">Round %d</string>
-    <string name="round_finished">Round finished!</string>
-    <string name="start_next_round">Start Next Round</string>
-    <string name="time_remaining">Time remaining: %02d:%02d</string>
-
-
 </resources>

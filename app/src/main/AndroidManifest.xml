@@ -13,24 +13,26 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.COMP_6057_FinalProjectG12"
         tools:targetApi="31">
-
+        <activity
+            android:name=".SessionViewActivity"
+            android:exported="false"
+            android:theme="@style/Theme.COMP_6057_FinalProjectG12" />
         <!-- LoginActivity (First screen) -->
-        <activity android:name=".LoginActivity"
+        <activity
+            android:name=".LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-
-        <!-- MainActivity (Navigation or future screens) -->
-        <activity android:name=".MainActivity"
+        </activity> <!-- MainActivity (Navigation or future screens) -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" /> <!-- HomeActivity (After successful login) -->
+        <activity
+            android:name=".HomeActivity"
             android:exported="true" />
-
-        <!-- HomeActivity (After successful login) -->
-        <activity android:name=".HomeActivity"
-            android:exported="true" />
-
     </application>
 
 </manifest>
