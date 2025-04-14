@@ -9,7 +9,7 @@
 
     <TextView
         android:id="@+id/sportNameText"
-        android:text="Sport: "
+        android:text="@string/sport_label"
         android:textSize="22sp"
         android:layout_marginBottom="16dp"
         android:layout_width="wrap_content"
@@ -17,7 +17,7 @@
 
     <TextView
         android:id="@+id/roundText"
-        android:text="Round 1"
+        android:text="@string/round_label"
         android:textSize="28sp"
         android:layout_marginBottom="12dp"
         android:layout_width="wrap_content"
@@ -25,7 +25,7 @@
 
     <TextView
         android:id="@+id/timerText"
-        android:text="00:00"
+        android:text="@string/round_finished"
         android:textSize="48sp"
         android:textStyle="bold"
         android:layout_marginBottom="24dp"
@@ -34,7 +34,7 @@
 
     <Button
         android:id="@+id/startRoundBtn"
-        android:text="Start Round"
+        android:text="@string/start_next_round"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 </LinearLayout>
