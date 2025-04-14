@@ -26,7 +26,7 @@ public class PlayActivity extends AppCompatActivity {
         roundText = findViewById(R.id.roundText);
         startRoundBtn = findViewById(R.id.startRoundBtn);
 
-        sport = "Basketball";
+        String sport = "Basketball";
         sportNameText.setText(getString(R.string.sport_label, sport));
 
         roundDurationInMillis = getRoundTimeForSport(sport);
@@ -44,8 +44,7 @@ public class PlayActivity extends AppCompatActivity {
             public void onTick(long millisUntilFinished) {
                 long minutes = millisUntilFinished / 60000;
                 long seconds = (millisUntilFinished % 60000) / 1000;
-                ((TextView) findViewById(R.id.sportNameText))
-                        .setText(getString(R.string.sport_label, sport));
+                timerText.setText(getString(R.string.time_remaining, minutes, seconds));
 
 
 
