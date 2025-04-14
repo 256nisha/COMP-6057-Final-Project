@@ -26,7 +26,7 @@ public class PlayActivity extends AppCompatActivity {
         roundText = findViewById(R.id.roundText);
         startRoundBtn = findViewById(R.id.startRoundBtn);
 
-        String sport = "Basketball";
+         sport = "Basketball";
         sportNameText.setText(getString(R.string.sport_label, sport));
 
         roundDurationInMillis = getRoundTimeForSport(sport);
