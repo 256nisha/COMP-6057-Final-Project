@@ -52,4 +52,9 @@
     <string name="membership_number">Membership No.:</string>
     <string name="session_number">Session No.:</string>
     <string name="_10_00_am_12_00_pm">10:00 AM - 12:00 PM</string>
+    <string name="sport_label">sport_label</string>
+    <string name="round_label">round_label</string>
+    <string name="time_remaining">time_remaining</string>
+    <string name="round_finished">round_finished</string>
+    <string name="start_next_round">start_next_round</string>
 </resources>

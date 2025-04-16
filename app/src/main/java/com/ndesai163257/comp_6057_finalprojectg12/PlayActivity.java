@@ -2,6 +2,7 @@ package com.ndesai163257.comp_6057_finalprojectg12;
 
 
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.widget.Button;
@@ -17,6 +18,7 @@ public class PlayActivity extends AppCompatActivity {
     private int roundNumber = 1;
     private String sport;
 
+    @SuppressLint("StringFormatInvalid")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +36,7 @@ public class PlayActivity extends AppCompatActivity {
         startRoundBtn.setOnClickListener(v -> startRound());
     }
 
+    @SuppressLint("StringFormatInvalid")
     private void startRound() {
         if (countDownTimer != null) countDownTimer.cancel();
 
