@@ -45,4 +45,11 @@
         libero vel nunc consequat, quis tincidunt nisl eleifend. Cras bibendum enim a justo luctus
         vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
     </string>
+    <string name="add_participant_page">Add Participant Page</string>
+    <string name="first_name">First Name:</string>
+    <string name="last_name">Last Name:</string>
+    <string name="phone_number">"Phone Number: "</string>
+    <string name="membership_number">Membership No.:</string>
+    <string name="session_number">Session No.:</string>
+    <string name="_10_00_am_12_00_pm">10:00 AM - 12:00 PM</string>
 </resources>

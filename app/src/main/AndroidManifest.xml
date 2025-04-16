@@ -26,13 +26,13 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity> <!-- MainActivity (Navigation or future screens) -->
+        </activity>
+        <!-- MainActivity (Navigation or future screens) -->
         <activity
-            android:name=".MainActivity"
-            android:exported="true" /> <!-- HomeActivity (After successful login) -->
+            android:name=".MainActivity" />
+        <!-- HomeActivity (After successful login) -->
         <activity
-            android:name=".HomeActivity"
-            android:exported="true" />
+            android:name=".HomeActivity"/>
     </application>
 
 </manifest>

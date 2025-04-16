@@ -1,52 +1,42 @@
 package com.ndesai163257.comp_6057_finalprojectg12;
 
-import java.io.Serializable;
-import java.time.Duration;
+import com.ndesai163257.comp_6057_finalprojectg12.Participant;
+
+import java.util.concurrent.TimeUnit;
+
+import io.realm.RealmList;
 import io.realm.RealmObject;
 import io.realm.annotations.PrimaryKey;
 
-public class Session extends RealmObject implements Serializable{
-
+public class Session extends RealmObject {
     @PrimaryKey
-    private long sessionId;
-    private Sport sport;
-    private int totalParticipants;
-    private Duration timeFrame;
-    private String gymNumber;
+    private int id;
+    private String sport;
+    private String timeFrame;
+    private int gymNumber;
+    private int maxPlayers;
+    private int durationMinutes;
+    private RealmList<Participant> participants;
 
-    public long getSessionId() {
-        return sessionId;
+    public Integer getSessionId() {
+        return null;
     }
 
-    public Sport getSport() {
-        return sport;
-    }
-
-    public void setSport(Sport sport) {
-        this.sport = sport;
+    public Object getSport() {
+        return null;
     }
 
     public int getTotalParticipants() {
-        return totalParticipants;
+        return 0;
     }
 
-    public void setTotalParticipants(int totalParticipants) {
-        this.totalParticipants = totalParticipants;
+    public TimeUnit getTimeFrame() {
+        return null;
     }
 
-    public Duration getTimeFrame() {
-        return timeFrame;
+    public int getGymNumber() {
+        return 0;
     }
 
-    public void setTimeFrame(Duration timeFrame) {
-        this.timeFrame = timeFrame;
-    }
-
-    public String getGymNumber() {
-        return gymNumber;
-    }
-
-    public void setGymNumber(String gymNumber) {
-        this.gymNumber = gymNumber;
-    }
+    // Getters & setters
 }

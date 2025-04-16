@@ -1,20 +1,152 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- Page Title -->
     <TextView
+        android:id="@+id/textHomeTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="All ongoing sports sessions:"
+        android:text="Sport Selection Home Page"
+        android:textSize="22sp"
         android:textStyle="bold"
-        android:textSize="18sp" />
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/sessionList"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:divider="@android:color/darker_gray"
-        android:dividerHeight="2dp"
-        android:layout_marginTop="30dp"/>
+        android:textAlignment="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Basketball -->
+    <TextView
+        android:id="@+id/textBasketball"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Basketball"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/textHomeTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/buttonBasketball"
+        app:layout_constraintBottom_toBottomOf="@id/buttonBasketball"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp" />
+
+    <Button
+        android:id="@+id/buttonBasketball"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select"
+        android:minHeight="48dp"
+        android:minWidth="88dp"
+        app:layout_constraintTop_toBottomOf="@id/textHomeTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <!-- Badminton -->
+    <TextView
+        android:id="@+id/textBadminton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Badminton"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/buttonBasketball"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/buttonBadminton"
+        app:layout_constraintBottom_toBottomOf="@id/buttonBadminton"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="8dp" />
+
+    <Button
+        android:id="@+id/buttonBadminton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select"
+        android:minHeight="48dp"
+        android:minWidth="88dp"
+        app:layout_constraintTop_toBottomOf="@id/buttonBasketball"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp" />
+
+    <!-- Volleyball -->
+    <TextView
+        android:id="@+id/textVolleyball"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Volleyball"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/buttonBadminton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/buttonVolleyball"
+        app:layout_constraintBottom_toBottomOf="@id/buttonVolleyball"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="8dp" />
+
+    <Button
+        android:id="@+id/buttonVolleyball"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select"
+        android:minHeight="48dp"
+        android:minWidth="88dp"
+        app:layout_constraintTop_toBottomOf="@id/buttonBadminton"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp" />
+
+    <!-- Pickleball -->
+    <TextView
+        android:id="@+id/textPickleball"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Pickleball"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/buttonVolleyball"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/buttonPickleball"
+        app:layout_constraintBottom_toBottomOf="@id/buttonPickleball"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="8dp" />
+
+    <Button
+        android:id="@+id/buttonPickleball"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select"
+        android:minHeight="48dp"
+        android:minWidth="88dp"
+        app:layout_constraintTop_toBottomOf="@id/buttonVolleyball"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp" />
+
+    <!-- Dodgeball -->
+    <TextView
+        android:id="@+id/textDodgeball"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Dodgeball"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/buttonPickleball"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/buttonDodgeball"
+        app:layout_constraintBottom_toBottomOf="@id/buttonDodgeball"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="8dp" />
+
+    <Button
+        android:id="@+id/buttonDodgeball"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select"
+        android:minHeight="48dp"
+        android:minWidth="88dp"
+        app:layout_constraintTop_toBottomOf="@id/buttonPickleball"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

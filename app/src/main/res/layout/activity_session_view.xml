@@ -1,101 +1,137 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:padding="5dp"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:padding="16dp">
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:orientation="horizontal"
-        android:padding="5dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Sport:"
-            android:textStyle="bold"
-            android:textSize="18sp"
-            android:layout_marginRight="5dp" />
-        <TextView
-            android:id="@+id/sportName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="sportName"
-            android:textStyle="bold"
-            android:textSize="18sp"
-            android:layout_marginRight="10dp" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Total Participants:"
-            android:textStyle="bold"
-            android:textSize="18sp"
-            android:layout_marginRight="5dp" />
-        <TextView
-            android:id="@+id/totalParticipants"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="totalPa"
-            android:textStyle="bold"
-            android:textSize="18sp"
-            android:layout_marginRight="12dp" />
-    </LinearLayout>
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:orientation="horizontal"
-        android:padding="5dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Time Slot:"
-            android:textStyle="bold"
-            android:textSize="18sp"
-            android:layout_marginRight="5dp" />
-        <TextView
-            android:id="@+id/timeFrame"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="timeFrame"
-            android:textStyle="bold"
-            android:textSize="18sp"
-            android:layout_marginRight="12dp" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Gym No:"
-            android:textStyle="bold"
-            android:textSize="18sp"
-            android:layout_marginRight="5dp" />
-        <TextView
-            android:id="@+id/gymNo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="gymNo"
-            android:textStyle="bold"
-            android:textSize="18sp"
-            android:layout_marginRight="12dp" />
-    </LinearLayout>
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:orientation="vertical"
-        android:padding="5dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="List of participants signed up for this session:"
-            android:textStyle="bold"
-            android:textSize="12sp"
-            android:layout_marginTop="15dp" />
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/participantList"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:divider="@android:color/darker_gray"
-            android:dividerHeight="2dp"
-            android:layout_marginTop="10dp"/>
-    </LinearLayout>
-</LinearLayout>
+    <TextView
+        android:id="@+id/sportLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="Select a Sport:"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/sportName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="4dp"
+        android:text="Basketball"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sportLabel" />
+
+    <TextView
+        android:id="@+id/totalParticipantsLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Total Participants:"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sportName" />
+
+    <TextView
+        android:id="@+id/totalParticipants"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        android:text="25"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/totalParticipantsLabel"
+        app:layout_constraintTop_toBottomOf="@id/sportName" />
+
+    <TextView
+        android:id="@+id/timeSlotLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="Time Slot:"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/totalParticipantsLabel" />
+
+    <TextView
+        android:id="@+id/timeFrame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="16dp"
+        android:text="10:00 AM - 12:00 PM"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/timeSlotLabel"
+        app:layout_constraintTop_toBottomOf="@id/totalParticipants" />
+
+    <TextView
+        android:id="@+id/gymNoLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:text="Gym No:"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/timeSlotLabel" />
+
+    <TextView
+        android:id="@+id/gymNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="4dp"
+        android:text="Gym 1"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/gymNoLabel"
+        app:layout_constraintTop_toBottomOf="@id/timeFrame" />
+
+    <TextView
+        android:id="@+id/participantsListLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="List of participants signed up for this session:"
+        android:textStyle="bold"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/gymNo"
+        android:layout_marginTop="20dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/participantList"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/participantsListLabel"
+        app:layout_constraintBottom_toTopOf="@id/backButton"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="2dp"/>
+
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:text="Back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

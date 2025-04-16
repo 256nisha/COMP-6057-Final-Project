@@ -1,8 +1,12 @@
 package com.ndesai163257.comp_6057_finalprojectg12;
 
+import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -10,15 +14,37 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
 
+    private final String VALID_EMAIL = "group12@gmail.com";
+    private final String VALID_PASSWORD = "123456";
+
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
+        });
+
+        EditText usernameField = findViewById(R.id.editTextEmail);
+        EditText passwordField = findViewById(R.id.editTextPassword);
+        Button loginButton = findViewById(R.id.buttonLogin);
+
+        loginButton.setOnClickListener(view -> {
+            String username = usernameField.getText().toString().trim();
+            String password = passwordField.getText().toString().trim();
+
+            if (username.equals(VALID_EMAIL) && password.equals(VALID_PASSWORD)) {
+                // Success: navigate to HomeActivity
+                Intent intent = new Intent(MainActivity.this, HomeActivity.class);
+                startActivity(intent);
+                finish(); // Optional: prevents going back to login screen
+            } else {
+                Toast.makeText(MainActivity.this, "Invalid username or password", Toast.LENGTH_SHORT).show();
+            }
         });
     }
 }
