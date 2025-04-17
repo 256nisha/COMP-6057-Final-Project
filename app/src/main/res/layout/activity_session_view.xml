@@ -1,137 +1,129 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:background="@android:color/white">
 
-    <TextView
-        android:id="@+id/sportLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:text="Select a Sport:"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+    <!-- Sport Title -->
     <TextView
         android:id="@+id/sportName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="4dp"
         android:text="Basketball"
-        android:textSize="18sp"
+        android:textSize="24sp"
         android:textStyle="bold"
+        android:textColor="#000000"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/sportLabel" />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        tools:ignore="MissingConstraints" />
 
+    <!-- Total Participants -->
     <TextView
         android:id="@+id/totalParticipantsLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
         android:text="Total Participants:"
-        android:textSize="18sp"
-        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="#666666"
+        app:layout_constraintTop_toBottomOf="@id/sportName"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/sportName" />
+        android:layout_marginTop="12dp" />
 
     <TextView
         android:id="@+id/totalParticipants"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="8dp"
         android:text="25"
-        android:textSize="18sp"
-        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="#000000"
         app:layout_constraintStart_toEndOf="@id/totalParticipantsLabel"
-        app:layout_constraintTop_toBottomOf="@id/sportName" />
+        app:layout_constraintTop_toTopOf="@id/totalParticipantsLabel"
+        android:layout_marginStart="8dp" />
 
+    <!-- Time Slot -->
     <TextView
         android:id="@+id/timeSlotLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
         android:text="Time Slot:"
-        android:textSize="18sp"
-        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="#666666"
+        app:layout_constraintTop_toBottomOf="@id/totalParticipantsLabel"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/totalParticipantsLabel" />
+        android:layout_marginTop="12dp" />
 
     <TextView
         android:id="@+id/timeFrame"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="16dp"
         android:text="10:00 AM - 12:00 PM"
-        android:textSize="18sp"
-        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        app:layout_constraintTop_toTopOf="@id/timeSlotLabel"
         app:layout_constraintStart_toEndOf="@id/timeSlotLabel"
-        app:layout_constraintTop_toBottomOf="@id/totalParticipants" />
+        android:layout_marginStart="8dp" />
 
+    <!-- Gym No -->
     <TextView
         android:id="@+id/gymNoLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="4dp"
         android:text="Gym No:"
-        android:textSize="18sp"
-        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="#666666"
+        app:layout_constraintTop_toBottomOf="@id/timeSlotLabel"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/timeSlotLabel" />
+        android:layout_marginTop="12dp" />
 
     <TextView
         android:id="@+id/gymNo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="4dp"
         android:text="Gym 1"
-        android:textSize="18sp"
-        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        app:layout_constraintTop_toTopOf="@id/gymNoLabel"
         app:layout_constraintStart_toEndOf="@id/gymNoLabel"
-        app:layout_constraintTop_toBottomOf="@id/timeFrame" />
+        android:layout_marginStart="8dp" />
 
+    <!-- Participant List Label -->
     <TextView
         android:id="@+id/participantsListLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="List of participants signed up for this session:"
+        android:text="Participants:"
+        android:textSize="16sp"
         android:textStyle="bold"
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="#333333"
         app:layout_constraintTop_toBottomOf="@id/gymNo"
-        android:layout_marginTop="20dp"/>
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp" />
 
+    <!-- RecyclerView -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/participantList"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/participantsListLabel"
         app:layout_constraintBottom_toTopOf="@id/backButton"
-        android:divider="@android:color/darker_gray"
-        android:dividerHeight="2dp"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:paddingTop="8dp" />
 
+    <!-- Back Button -->
     <Button
         android:id="@+id/backButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
         android:text="Back"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:layout_marginBottom="24dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,40 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/playLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="24dp"
-    android:orientation="vertical"
-    android:gravity="center">
+    android:background="@android:color/white">
 
+    <!-- Sport Name -->
     <TextView
         android:id="@+id/sportNameText"
-        android:text="@string/sport_label"
-        android:textSize="22sp"
-        android:layout_marginBottom="16dp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="@string/sport_label"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="48dp" />
 
+    <!-- Round Info -->
     <TextView
         android:id="@+id/roundText"
-        android:text="@string/round_label"
-        android:textSize="28sp"
-        android:layout_marginBottom="12dp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="@string/round_label"
+        android:textSize="22sp"
+        android:textColor="#444444"
+        app:layout_constraintTop_toBottomOf="@id/sportNameText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp" />
 
+    <!-- Timer Text -->
     <TextView
         android:id="@+id/timerText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="@string/round_finished"
         android:textSize="48sp"
         android:textStyle="bold"
-        android:layout_marginBottom="24dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:textColor="#1E88E5"
+        app:layout_constraintTop_toBottomOf="@id/roundText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp" />
 
+    <!-- Start Round Button -->
     <Button
         android:id="@+id/startRoundBtn"
-        android:text="@string/start_next_round"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-</LinearLayout>
+        android:layout_height="wrap_content"
+        android:text="@string/start_next_round"
+        app:layout_constraintTop_toBottomOf="@id/timerText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

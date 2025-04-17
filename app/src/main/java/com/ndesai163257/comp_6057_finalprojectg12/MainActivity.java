@@ -14,9 +14,6 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
 
-    private final String VALID_EMAIL = "group12@gmail.com";
-    private final String VALID_PASSWORD = "123456";
-
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,13 +34,13 @@ public class MainActivity extends AppCompatActivity {
             String username = usernameField.getText().toString().trim();
             String password = passwordField.getText().toString().trim();
 
-            if (username.equals(VALID_EMAIL) && password.equals(VALID_PASSWORD)) {
-                // Success: navigate to HomeActivity
+            if (username.equals("admin") && password.equals("123456")) {
+                /* Navigate to HomeActivity */
                 Intent intent = new Intent(MainActivity.this, HomeActivity.class);
                 startActivity(intent);
                 finish(); // Optional: prevents going back to login screen
-            } else {
-                Toast.makeText(MainActivity.this, "Invalid username or password", Toast.LENGTH_SHORT).show();
+            }else {
+                Toast.makeText(MainActivity.this, "Invalid login", Toast.LENGTH_SHORT).show();
             }
         });
     }

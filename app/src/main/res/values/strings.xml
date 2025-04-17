@@ -57,4 +57,5 @@
     <string name="time_remaining">time_remaining</string>
     <string name="round_finished">round_finished</string>
     <string name="start_next_round">start_next_round</string>
+    <string name="sportly">Sportly</string>
 </resources>
